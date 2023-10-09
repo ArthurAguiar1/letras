@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>ex2</title>
+
+
+
+
+
+    <script>
+        function escreva()
+        {
+            var letra
+            letra = new String(document.frm.caracter.value)
+            numero = document.frm.num.value
+            document.write("<table border='1'>")
+                document.write("<tr>")
+                    document.write("<td>")
+                    for (i = 0; i < numero; i++)
+                    {
+                        document.write( letra)
+                    }
+                    document.write("</td>")
+                document.write("</tr>")
+            document.write("</table>")
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <form name="frm">
+        CARACTER: <input type="text" name="caracter">
+        NUMERO INTEIRO: <input type="text" name="num">
+        <input type="button" onclick="escreva()">
+    </form>
+</body>
+</html>

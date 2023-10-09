@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        td{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+
+
+
+
+    <script>
+        function tabela()
+        {   
+            var letra
+            letra = new String(document.frm.algumacoisa.value)
+            document.write("<table border='1'>")
+            document.write("<tr>")
+            for (i = 0; i < letra.length; i++)
+            {
+                document.write(`<td>${letra.charAt(i)}</td>`)
+            }
+            document.write("</tr>")
+            for (i = 1; i < letra.length; i++)
+            {
+                document.write("<tr>")
+                document.write(`<td>${letra.charAt(i)}</td>`)
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <form name="frm">
+        Digite alguma coisa: <input type="text" name="algumacoisa"> <br>
+        <input type="button" name="bttn" value="Enviar" onclick="tabela()">
+    </form>
+</body>
+
+</html>
